@@ -12,7 +12,24 @@ public class ProgramEmpolyee {
 
         Empolyee emp = new Empolyee();
 
-        System.out.println("Nome: ");
+        System.out.print("Nome: ");
         emp.name = sc.nextLine();
+
+        System.out.print("Gross salary: ");
+        emp.grossSalary = sc.nextDouble();
+
+        System.out.print("Tax: ");
+        emp.tax = sc.nextDouble();
+
+        System.out.println();
+        System.out.println("Empolyee: " + emp);
+
+        System.out.println("Which percentage to increase salary ? ");
+        double percentage = sc.nextDouble();
+        emp.increaseSalary(percentage);
+        System.out.println();
+        System.out.println("Updated data: " + emp);
+
+        sc.close();
     }
 }
